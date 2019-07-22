@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".single_movie_details.SingleMovie">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+            <TextView
+                    android:id="@+id/text_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Connection problem"
+                    android:visibility="gone"/>
+            
+            <ScrollView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                
+                <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+    
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="500dp"
+                                app:srcCompat="@mipmap/ic_launcher"
+                                android:layout_gravity="center"
+                                android:scaleType="matrix"
+                                android:id="@+id/movie_poster"/>
+    
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                    
+                                    <TextView
+                                            android:id="@+id/movie_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="movie"
+                                            android:textSize="18sp"/>
+    
+                                    <TextView
+                                            android:id="@+id/movie_tagline"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="sub title"
+                                            android:textSize="14sp"/>
+    
+                                    <TextView
+                                            android:id="@+id/movie_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="Movie Info"
+                                            android:textSize="14sp"/>
+    
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+                                    
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="Release Date:"
+                                            android:textSize="14sp"/>
+    
+                                    <TextView
+                                            android:id="@+id/release_date"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="2019"
+                                            android:textSize="14sp"/>
+                                    </LinearLayout>
+    
+    
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+        
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="Rating:"
+                                                android:textSize="14sp"/>
+        
+                                        <TextView
+                                                android:id="@+id/movie_ratings"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="8"
+                                                android:textSize="14sp"/>
+                                    </LinearLayout>
+    
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+        
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="Runtime: "
+                                                android:textSize="14sp"/>
+        
+                                        <TextView
+                                                android:id="@+id/movie_runtime"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="2.4hrs"
+                                                android:textSize="14sp"/>
+                                    </LinearLayout>
+    
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+        
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="Budget: "
+                                                android:textSize="14sp"/>
+        
+                                        <TextView
+                                                android:id="@+id/movie_budget"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="130,000"
+                                                android:textSize="14sp"/>
+                                    </LinearLayout>
+    
+    
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+        
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="Revenue: "
+                                                android:textSize="14sp"/>
+        
+                                        <TextView
+                                                android:id="@+id/movie_revenue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textStyle="bold"
+                                                android:text="130,000"
+                                                android:textSize="14sp"/>
+                                    </LinearLayout>
+    
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="Overview"
+                                            android:textSize="14sp"/>
+    
+                                    <TextView
+                                            android:id="@+id/movie_overview"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="overview....."
+                                            android:textSize="14sp"/>
+                                    
+                                        
+                                </LinearLayout>
+
+                </LinearLayout>
+                
+            </ScrollView>
+
+
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
